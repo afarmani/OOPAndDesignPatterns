@@ -1,13 +1,13 @@
 package com.afarmani.patterns.behavioral.behavioral.state;
 
-public class Selection extends Tool {
+public class SelectionTool implements Tool {
     @Override
-    void mouseDown() {
+    public void mouseDown() {
         System.out.println("selection tool clicked");
     }
 
     @Override
-    void mouseUp() {
+    public void mouseUp() {
         System.out.println("selection tool selected");
     }
 }

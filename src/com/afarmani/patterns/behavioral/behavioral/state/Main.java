@@ -8,19 +8,16 @@ public class Main {
     public static void main(String[] args) {
 
         // brush and selection variables below instantiate two new canvases.
-        // Canvas is composed of Tool objects (HAS-A)
-        Canvas brush = new Canvas();
-        Canvas selection = new Canvas();
-
+        // Canvas is composed of the Tool objects (HAS-A)
         //set the tools for the canvas, brush and selection classes are the concrete class of tool.
-        brush.setCurrentTool(new Brush());
-        selection.setCurrentTool(new Selection());
+        Canvas brush = new Canvas(new BrushTool());
+        Canvas selection = new Canvas(new SelectionTool());
 
-        brush.getCurrentTool().mouseDown();
-        brush.getCurrentTool().mouseUp();
+        brush.mouseDown();
+        brush.mouseUp();
 
-        selection.getCurrentTool().mouseDown();
-        selection.getCurrentTool().mouseUp();
+        selection.mouseDown();
+        selection.mouseUp();
         /** OUTPUT:
          * Brush tool clicked
          * Brush tool selected

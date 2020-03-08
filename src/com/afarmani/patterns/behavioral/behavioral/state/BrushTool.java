@@ -1,13 +1,13 @@
 package com.afarmani.patterns.behavioral.behavioral.state;
 
-public class Brush extends Tool {
+public class BrushTool implements Tool {
     @Override
-    void mouseDown() {
+    public void mouseDown() {
         System.out.println("Brush tool clicked");
     }
 
     @Override
-    void mouseUp() {
+    public void mouseUp() {
         System.out.println("Brush tool selected");
     }
 }
