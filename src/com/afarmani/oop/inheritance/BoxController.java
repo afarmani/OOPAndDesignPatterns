@@ -1,12 +1,11 @@
 package com.afarmani.oop.inheritance;
 
-//We set the Box Controller as abstract so that it can not be created directly.
+/** an abstract class can implement an interface, and not provide implementations of all of the interface's methods.
+ * It is the responsibility of the first concrete class that extends this abstract class to implement all of the
+ * methods in the interface.
+ * */
 public abstract class BoxController implements Box{
-
-    /** an abstract class can implement an interface, and not provide implementations of all of the interface's methods.
-     * It is the responsibility of the first concrete class that extends this abstract class to implement all of the
-     * methods in the interface.
-     * */
+//We set the Box Controller as abstract so that it can not be created directly.
 
     private float size;
     private float coordinates;

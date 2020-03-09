@@ -1,5 +1,9 @@
 package com.afarmani.oop.abstraction;
 
+/** Make the implementation details of this class hidden by using private modifiers
+ * by doing this if the implementation details change, the client code does not need
+ * to be changed as well*/
+
 public class MailService {
     public boolean sendEmail(String emailBody){
         connect();
@@ -8,10 +12,6 @@ public class MailService {
         authenticate();
         return true;
     }
-
-    /** Make the implementation details of this class hidden by using private modifiers
-     * by doing this if the implementation details change, the client code does not need
-     * to be changed as well*/
 
     private void connect(){
         System.out.println("Connect");

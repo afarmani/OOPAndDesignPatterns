@@ -3,7 +3,7 @@ package com.afarmani.patterns.behavioral.behavioral.memento;
  * Memento patterns are a behavioural pattern used to implement undo mechanisms.
  */
 
-public class Main {
+public class MementoMain {
 
     public static void main(String[] args) {
         History history = new History();
@@ -28,6 +28,13 @@ public class Main {
 
         editor.restore(history.undo());
         System.out.println(editor.getContent()); // returns "a"
+
+        /**
+         * OUTPUT:
+         * c
+         * b
+         * a
+         */
 
     }
 }
