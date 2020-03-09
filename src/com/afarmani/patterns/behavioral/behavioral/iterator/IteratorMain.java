@@ -14,7 +14,7 @@ public class IteratorMain {
     public static void main(String[] args) {
 
         //as we are using generics for the history managers, we can pass class types other than Sites.
-        HistoryManager<Sites> historyManager = new HistoryManager<>();
+        HistoryManager<Sites> historyManager = new HistoryManager<>(10);
         Iterator iterator = historyManager.createIterator();
 
         historyManager.push(new Sites("Http://www.google.com"));

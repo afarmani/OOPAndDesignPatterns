@@ -6,15 +6,19 @@ package com.afarmani.patterns.behavioral.behavioral.iterator;
  * */
 public class HistoryManager<E> {
 
-    private E[] history = (E[]) new Object[10];
+    private E[] history;
     int count;
 
+    //create a constructor to initialize the history size.
+    public HistoryManager(int historySize){
+        this.history = (E[]) new Object[historySize];
+
+    }
     public void push(E e){
         history[count++] = e;
     }
     public E pop(){
         return (E) history[count--];
-
     }
 
     //returns the iterator to be used to traverse the siteManager.
